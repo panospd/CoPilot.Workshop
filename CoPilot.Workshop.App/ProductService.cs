@@ -4,7 +4,14 @@ namespace CoPilot.Workshop.App
 {
     public class ProductService
     {
-        public void CreateProduct(AddProductRequest productDto)
+        private readonly IProductRepository _productRepository;
+
+        public ProductService(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
+
+        public async Task CreateProductAsync(AddProductRequest productDto)
         {
             var product = Product.Create(
                 productDto.Name,
@@ -12,7 +19,7 @@ namespace CoPilot.Workshop.App
                 productDto.Price
             );
 
-            // Additional logic to save the product can be added here
+            await _productRepository.CreateProductAsync(product);
         }
     }
 }

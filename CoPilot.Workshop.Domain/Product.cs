@@ -2,7 +2,7 @@
 
 namespace CoPilot.Workshop.Domain
 {
-    public class Product : BaseEntity
+public class Product : BaseEntity
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
@@ -16,14 +16,9 @@ namespace CoPilot.Workshop.Domain
             Price = price;
         }
 
-        public static Product Create(int id, string name, string description, decimal price)
+        public static Product Create(string name, string description, decimal price)
         {
-            return new Product(id, name, description, price);
-        }
-
-        public static object Create(string name, string description, decimal price)
-        {
-            throw new NotImplementedException();
+            return new Product(0, name, description, price);
         }
     }
 }

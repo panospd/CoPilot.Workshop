@@ -1,8 +1,9 @@
 using CoPilot.Workshop.App;
+using CoPilot.Workshop.App.Products;
 using CoPilot.Workshop.Domain;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CoPilot.Workshop.API.Controllers
+namespace CoPilot.Workshop.API.Controllers.Products
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -16,9 +17,9 @@ namespace CoPilot.Workshop.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct([FromBody] ProductDto productDto)
+        public async Task<IActionResult> CreateProduct([FromBody] ProductDto productDto, CancellationToken cancellationToken)
         {
-            await _productService.CreateProductAsync(new AddProductRequest(productDto.Name, productDto.Description, productDto.Price));
+            await _productService.CreateProductAsync(new AddProductRequest(productDto.Name, productDto.Description, productDto.Price), cancellationToken);
             return Ok();
         }
     }

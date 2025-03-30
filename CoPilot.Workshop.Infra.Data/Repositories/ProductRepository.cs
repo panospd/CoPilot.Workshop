@@ -1,4 +1,5 @@
 // CoPilot.Workshop.Infra.Data/ProductRepository.cs
+using CoPilot.Workshop.App.Products;
 using CoPilot.Workshop.Domain;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
@@ -14,10 +15,10 @@ namespace CoPilot.Workshop.Infra.Data.Repositories
             _context = context;
         }
 
-        public async Task CreateProductAsync(Product product)
+        public async Task CreateProductAsync(Product product, CancellationToken cancellationToken = default)
         {
-            await _context.Products.AddAsync(product);
-            await _context.SaveChangesAsync();
+            await _context.Products.AddAsync(product, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
         }
     }
 }

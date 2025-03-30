@@ -3,7 +3,7 @@ using CoPilot.Workshop.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CoPilot.Workshop.Infra.Data
+namespace CoPilot.Workshop.Infra.Data.Configurations
 {
     public class ProductConfiguration : IEntityTypeConfiguration<Product>
     {

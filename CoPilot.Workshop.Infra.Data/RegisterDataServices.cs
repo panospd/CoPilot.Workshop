@@ -1,5 +1,5 @@
 // CoPilot.Workshop.Infra.Data/ServiceCollectionExtensions.cs
-using CoPilot.Workshop.Domain;
+using CoPilot.Workshop.App.Products;
 using CoPilot.Workshop.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

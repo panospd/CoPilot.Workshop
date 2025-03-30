@@ -1,4 +1,5 @@
 
+using CoPilot.Workshop.App.Products;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CoPilot.Workshop.App

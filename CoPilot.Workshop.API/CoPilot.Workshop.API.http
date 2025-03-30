@@ -1,0 +1,6 @@
+@CoPilot.Workshop.API_HostAddress = http://localhost:5049
+
+GET {{CoPilot.Workshop.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

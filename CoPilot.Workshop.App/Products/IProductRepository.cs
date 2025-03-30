@@ -7,6 +7,7 @@ namespace CoPilot.Workshop.App.Products
     public interface IProductRepository
     {
         Task CreateProductAsync(Product product, CancellationToken cancellationToken = default);
+        Task<IEnumerable<Product>> GetAllProductsAsync(CancellationToken cancellationToken = default);
     }
 }
 

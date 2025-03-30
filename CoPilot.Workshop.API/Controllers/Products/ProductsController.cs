@@ -22,5 +22,12 @@ namespace CoPilot.Workshop.API.Controllers.Products
             await _productService.CreateProductAsync(new AddProductRequest(productDto.Name, productDto.Description, productDto.Price), cancellationToken);
             return Ok();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllProductsAsync(CancellationToken cancellationToken)
+        {
+            var products = await _productService.GetAllProductsAsync(cancellationToken);
+            return Ok(products);
+        }
     }
 }

@@ -1,6 +1,18 @@
 @CoPilot.Workshop.API_HostAddress = http://localhost:5049
+###
 
-GET {{CoPilot.Workshop.API_HostAddress}}/weatherforecast/
+GET {{CoPilot.Workshop.API_HostAddress}}/api/products
 Accept: application/json
+
+###
+
+POST {{CoPilot.Workshop.API_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Sample Product",
+  "description": "This is a sample product.",
+  "price": 19.99
+}
 
 ###

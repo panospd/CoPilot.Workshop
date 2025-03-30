@@ -34,5 +34,15 @@ namespace CoPilot.Workshop.App.Products
 
             await _productRepository.CreateProductAsync(product, cancellationToken);
         }
+
+        /// <summary>
+        /// Retrieves all products asynchronously.
+        /// </summary>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>A task that represents the asynchronous operation, containing a list of products.</returns>
+        public async Task<IEnumerable<Product>> GetAllProductsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _productRepository.GetAllProductsAsync(cancellationToken);
+        }
     }
 }

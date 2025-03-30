@@ -20,6 +20,11 @@ namespace CoPilot.Workshop.Infra.Data.Repositories
             await _context.Products.AddAsync(product, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
         }
+
+        public async Task<IEnumerable<Product>> GetAllProductsAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.Products.ToListAsync(cancellationToken);
+        }
     }
 }
 

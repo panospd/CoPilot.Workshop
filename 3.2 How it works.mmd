@@ -1,0 +1,15 @@
+
+
+graph TD;
+    Developer-->Input;
+    Developer--> Code;
+    Developer--> Comments;
+    Developer--> tabs;
+    Developer--> CoPilot_chat;
+    Code-->Prompt;
+    Comments-->Prompt;
+    tabs-->Prompt;
+    CoPilot_chat--> Prompt;
+    Prompt--->LLM/GPT;
+    LLM/GPT--->Suggestions;
+    Suggestions-->Developer;

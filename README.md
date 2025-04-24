@@ -8,6 +8,8 @@
 ## 2. First steps with Github Copilot (Demo)
 1. Inline Prompts
 1. Chat Prompts
+1. Documentation
+1. Debugging
 
 ## 3. Back to Theory - What is Github CoPilot
 
@@ -19,4 +21,4 @@
 2. Provide examples and be specific
 3. 'Step by Step' vs 'All at Once' 
 4. Provide Context
-5. Be a clean developer
+5. Be a clean developer 

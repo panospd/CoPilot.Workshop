@@ -18,7 +18,7 @@
 ### Best Practices
 
 1. Set the Stage - Provide Clear intent
-2. Provide examples and be specific
+2. Be specific
 3. 'Step by Step' vs 'All at Once' 
 4. Provide Context
 5. Be a clean developer 

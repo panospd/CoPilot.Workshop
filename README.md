@@ -1,24 +1,17 @@
 # Agenda
 
-## 1. Overview of AI assisted programming with Visual Studio
-1. IntelliCode
-2. Inline Prompts
-3. Chat prompts
-
-## 2. First steps with Github Copilot (Demo)
+## INtroduction
 1. Inline Prompts
-1. Chat Prompts
-1. Documentation
-1. Debugging
+1. Copilot Chat
+1. When to use each
 
-## 3. Back to Theory - What is Github CoPilot
+## 2. Copilot Basics
+1. Built in commands
+1. Meaning of context in Github copilot
+1. References (Chat)
 
-## 4. Prompt engineering - Best practices
-#### In this section, I will demonstrate best practices when working with Github CoPilot. We will add a feature as well as make smaller and will demonstrate how CoPilot can help.
-### Best Practices
+## 3. Real world usage
 
-1. Set the Stage - Provide Clear intent
-2. Be specific
-3. 'Step by Step' vs 'All at Once' 
-4. Provide Context
-5. Be a clean developer 
+1. Adding a feature
+1. Fixing a bug
+1. Adding tests/refactoring

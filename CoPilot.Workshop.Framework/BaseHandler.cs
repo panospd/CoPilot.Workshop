@@ -2,6 +2,24 @@
 
 namespace CoPilot.Workshop.Framework
 {
+    public abstract class BaseHandler<T, V, R> : BaseHandler<T, V>
+        where T : class
+        where V : AbstractValidator<T>, new()
+    {
+        public override abstract Task<R> ExecuteAsync(T request, CancellationToken cancellationToken = default);
+    }
+
+    public abstract class BaseHandler<T>
+        where T : class
+    {
+        public virtual Task HandleAsync(T request, CancellationToken cancellationToken = default)
+        {
+            return ExecuteAsync(request, cancellationToken);
+        }
+
+        public abstract Task ExecuteAsync(T request, CancellationToken cancellationToken = default);
+    }
+
     public abstract class BaseHandler<T, V>
         where T : class
         where V : AbstractValidator<T>, new()
@@ -27,12 +45,5 @@ namespace CoPilot.Workshop.Framework
         }
 
         public abstract Task ExecuteAsync(T request, CancellationToken cancellationToken = default);
-    }
-
-    public abstract class BaseHandler<T, V, R> : BaseHandler<T, V>
-        where T : class
-        where V : AbstractValidator<T>, new()
-    {
-        public override abstract Task<R> ExecuteAsync(T request, CancellationToken cancellationToken = default);
     }
 }

@@ -3,6 +3,7 @@ using CoPilot.Workshop.App.Products;
 using CoPilot.Workshop.App.Products.Create;
 using CoPilot.Workshop.Domain;
 using Microsoft.AspNetCore.Mvc;
+using static CoPilot.Workshop.App.Products.Create.CreateProductCommand;
 
 namespace CoPilot.Workshop.API.Controllers.Products
 {

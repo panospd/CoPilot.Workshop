@@ -2,7 +2,7 @@
 
 namespace CoPilot.Workshop.App.Products.Create
 {
-    public class AddProductRequestValidator : AbstractValidator<AddProductRequest>
+    public class AddProductRequestValidator : AbstractValidator<CreateProductCommand>
     {
         public AddProductRequestValidator()
         {

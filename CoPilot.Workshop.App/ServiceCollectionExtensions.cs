@@ -1,7 +1,7 @@
 
 using CoPilot.Workshop.App.Products;
-using CoPilot.Workshop.App.Products.Create;
 using Microsoft.Extensions.DependencyInjection;
+using static CoPilot.Workshop.App.Products.Create.CreateProductCommand;
 
 namespace CoPilot.Workshop.App
 {

@@ -20,7 +20,7 @@ namespace CoPilot.Workshop.API.Controllers.Products
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromBody] ProductDto productDto, [FromServices] CreateProductHandler handler, CancellationToken cancellationToken)
         {
-            await handler.HandleAsync(new AddProductRequest(productDto.Name, productDto.Description, productDto.Price), cancellationToken);
+            await handler.HandleAsync(new CreateProductCommand(productDto.Name, productDto.Description, productDto.Price), cancellationToken);
             return Ok();
         }
 

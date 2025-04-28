@@ -10,6 +10,13 @@ namespace CoPilot.Workshop.App.Products.Create
                 .NotEmpty()
                 .MinimumLength(3)
                 .MaximumLength(50);
+
+            RuleFor(x => x.Description)
+                .NotEmpty()
+                .MinimumLength(3)
+                .MaximumLength(200);
+
+            RuleFor(x => x.Price).GreaterThan(0);
         }
     }
 }

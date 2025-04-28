@@ -11,8 +11,8 @@
 1. Visual Studio
 
 ## 2. Copilot Basics
-1. Inline Prompts
-1. Copilot Chat
+1. Inline Prompts (Product domain assertions)
+1. Copilot Chat (add tests)
 1. When to use each
 1. Built in commands
 1. Meaning of context in Github copilot
@@ -20,6 +20,6 @@
 
 ## 3. Real world usage
 
-1. Refactoring
-1. Adding a feature
-1. Fixing a bug
+1. Refactoring (GetAllProducts)
+1. Adding a feature (Create order with order items)
+1. Fixing a bug (bad validations)

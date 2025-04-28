@@ -2,9 +2,9 @@
 
 namespace CoPilot.Workshop.App.Products.Create
 {
-    public class AddProductRequestValidator : AbstractValidator<CreateProductCommand>
+    public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
     {
-        public AddProductRequestValidator()
+        public CreateProductCommandValidator()
         {
             RuleFor(x => x.Name)
                 .NotEmpty()

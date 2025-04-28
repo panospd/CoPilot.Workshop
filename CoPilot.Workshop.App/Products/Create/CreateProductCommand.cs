@@ -5,7 +5,7 @@ namespace CoPilot.Workshop.App.Products.Create
 {
     public record CreateProductCommand(string Name, string Description, decimal Price)
     {
-        public class CreateProductHandler : BaseHandler<CreateProductCommand, AddProductRequestValidator>
+        public class CreateProductHandler : BaseHandler<CreateProductCommand, CreateProductCommandValidator>
         {
             private readonly IProductRepository _productRepository;
 

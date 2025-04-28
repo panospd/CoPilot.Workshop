@@ -2,9 +2,14 @@
 {
     public class ValidationException : Exception
     {
-        public IDictionary<string, string[]> Errors { get; }
+        public Dictionary<string, string[]> Errors { get; } = [];
 
-        public ValidationException(IDictionary<string, string[]> errors)
+        public ValidationException(string propName, string message) : base(message)
+        {
+            Errors.TryAdd(propName, [message]);
+        }
+
+        public ValidationException(Dictionary<string, string[]> errors)
             : base("Validation failed.")
         {
             Errors = errors;

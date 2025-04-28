@@ -20,6 +20,6 @@
 
 ## 3. Real world usage
 
+1. Refactoring
 1. Adding a feature
 1. Fixing a bug
-1. Adding tests/refactoring

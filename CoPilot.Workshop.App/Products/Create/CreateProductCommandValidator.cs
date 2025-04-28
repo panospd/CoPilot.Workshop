@@ -8,7 +8,7 @@ namespace CoPilot.Workshop.App.Products.Create
         {
             RuleFor(x => x.Name)
                 .NotEmpty()
-                .MinimumLength(3)
+                .MinimumLength(1)
                 .MaximumLength(50);
 
             RuleFor(x => x.Description)

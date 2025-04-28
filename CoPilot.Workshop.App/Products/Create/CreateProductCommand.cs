@@ -5,7 +5,7 @@ namespace CoPilot.Workshop.App.Products.Create
 {
     public record CreateProductCommand(string Name, string Description, decimal Price)
     {
-        public class CreateProductHandler : BaseHandler<CreateProductCommand, CreateProductCommandValidator>
+        public class CreateProductHandler : BaseHandler<CreateProductCommand, bool, CreateProductCommandValidator>
         {
             private readonly IProductRepository _productRepository;
 
@@ -25,7 +25,7 @@ namespace CoPilot.Workshop.App.Products.Create
             /// <param name="cancellationToken">The cancellation token.</param>  
             /// <returns>A task that represents the asynchronous operation.</returns>
 
-            public override async Task ExecuteAsync(CreateProductCommand request, CancellationToken cancellationToken = default)
+            public override async Task<bool> ExecuteAsync(CreateProductCommand request, CancellationToken cancellationToken = default)
             {
                 var product = Product.Create(
                     request.Name,
@@ -34,6 +34,8 @@ namespace CoPilot.Workshop.App.Products.Create
                 );
 
                 await _productRepository.CreateProductAsync(product, cancellationToken);
+
+                return true;
             }
         }
     }

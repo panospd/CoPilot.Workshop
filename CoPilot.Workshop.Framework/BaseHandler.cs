@@ -2,7 +2,7 @@
 
 namespace CoPilot.Workshop.Framework
 {
-    public abstract class BaseHandler<T, V, R>
+    public abstract class BaseHandler<T, R, V>
         where T : class
         where V : AbstractValidator<T>, new()
     {
@@ -44,11 +44,11 @@ namespace CoPilot.Workshop.Framework
         where T : class
         where R : class
     {
-        public virtual Task HandleAsync(T request, CancellationToken cancellationToken = default)
+        public virtual Task<R> HandleAsync(T request, CancellationToken cancellationToken = default)
         {
             return ExecuteAsync(request, cancellationToken);
         }
 
-        public abstract Task ExecuteAsync(T request, CancellationToken cancellationToken = default);
+        public abstract Task<R> ExecuteAsync(T request, CancellationToken cancellationToken = default);
     }
 }

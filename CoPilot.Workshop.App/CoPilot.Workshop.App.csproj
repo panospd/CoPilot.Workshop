@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CoPilot.Workshop.Domain\CoPilot.Workshop.Domain.csproj" />
+    <ProjectReference Include="..\CoPilot.Workshop.Framework\CoPilot.Workshop.Framework.csproj" />
   </ItemGroup>
 
 </Project>

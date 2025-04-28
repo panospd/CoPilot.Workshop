@@ -19,23 +19,6 @@ namespace CoPilot.Workshop.App.Products
         }
 
         /// <summary>
-        /// Creates a new product asynchronously.
-        /// </summary>
-        /// <param name="productDto">The product data transfer object.</param>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>A task that represents the asynchronous operation.</returns>
-        public async Task CreateProductAsync(AddProductRequest productDto, CancellationToken cancellationToken = default)
-        {
-            var product = Product.Create(
-                productDto.Name,
-                productDto.Description,
-                productDto.Price
-            );
-
-            await _productRepository.CreateProductAsync(product, cancellationToken);
-        }
-
-        /// <summary>
         /// Retrieves all products asynchronously.
         /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>

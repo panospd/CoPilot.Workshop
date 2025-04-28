@@ -1,5 +1,6 @@
 
 using CoPilot.Workshop.App.Products;
+using CoPilot.Workshop.App.Products.Create;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CoPilot.Workshop.App
@@ -9,6 +10,7 @@ namespace CoPilot.Workshop.App
         public static IServiceCollection RegisterAppServices(this IServiceCollection services)
         {
             services.AddScoped<ProductService>();
+            services.AddScoped<CreateProductHandler>();
             return services;
         }
     }

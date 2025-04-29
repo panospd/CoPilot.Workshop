@@ -4,6 +4,11 @@
     {
         public Dictionary<string, string[]> Errors { get; } = [];
 
+        public ValidationException(string message)
+            : this(string.Empty, message)
+        {
+        }
+
         public ValidationException(string propName, string message) : base(message)
         {
             Errors.TryAdd(propName, [message]);

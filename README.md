@@ -23,3 +23,14 @@
 1. Refactoring (GetAllProducts)
 1. Adding a feature (Create order with order items)
 1. Fixing a bug (bad validations)
+
+Demo agenda
+Interacting with GitHub co-pilot (5 mins)
+
+Refactoring with Co-pilot (5 mins)
+
+Fixing a bug with Co-pilot (5 mins)
+
+Questions (5 mins)
+
+Unit tests (5 mins) - Bonus if there is still time

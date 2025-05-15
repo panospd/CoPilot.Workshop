@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using CoPilot.Workshop.Domain;
+using FluentValidation;
 
 namespace CoPilot.Workshop.App.Products.Create
 {
@@ -8,15 +9,16 @@ namespace CoPilot.Workshop.App.Products.Create
         {
             RuleFor(x => x.Name)
                 .NotEmpty()
-                .MinimumLength(1)
-                .MaximumLength(50);
+                .MinimumLength(Product.NameMinLength)
+                .MaximumLength(Product.NameMaxLength);
 
             RuleFor(x => x.Description)
                 .NotEmpty()
-                .MinimumLength(3)
-                .MaximumLength(200);
+                .MinimumLength(Product.DescriptionMinLength)
+                .MaximumLength(Product.DescriptionMaxLength);
 
-            RuleFor(x => x.Price).GreaterThan(0);
+            RuleFor(x => x.Price)
+                .GreaterThanOrEqualTo(Product.PriceMinValue);
         }
     }
 }

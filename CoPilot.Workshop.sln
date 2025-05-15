@@ -18,6 +18,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoPilot.Workshop.Framework", "CoPilot.Workshop.Framework\CoPilot.Workshop.Framework.csproj", "{D41EBF99-A2C2-4E09-9674-CB6F2D34F3E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoPilot.Workshop.Domain.Tests", "Tests\CoPilot.Workshop.Domain.Tests\CoPilot.Workshop.Domain.Tests.csproj", "{661D4311-F6D1-44AA-BED4-5BD85E1AA7F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,9 +48,16 @@ Global
 		{D41EBF99-A2C2-4E09-9674-CB6F2D34F3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D41EBF99-A2C2-4E09-9674-CB6F2D34F3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D41EBF99-A2C2-4E09-9674-CB6F2D34F3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661D4311-F6D1-44AA-BED4-5BD85E1AA7F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661D4311-F6D1-44AA-BED4-5BD85E1AA7F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661D4311-F6D1-44AA-BED4-5BD85E1AA7F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661D4311-F6D1-44AA-BED4-5BD85E1AA7F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{661D4311-F6D1-44AA-BED4-5BD85E1AA7F3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D27EEA8D-73C4-4AB7-9351-D98E38E875EB}

@@ -25,7 +25,7 @@ namespace CoPilot.Workshop.App.Products.Create
             /// <param name="cancellationToken">The cancellation token.</param>  
             /// <returns>A task that represents the asynchronous operation.</returns>
 
-            public override async Task<bool> ExecuteAsync(CreateProductCommand request, CancellationToken cancellationToken = default)
+            protected override async Task<bool> ExecuteAsync(CreateProductCommand request, CancellationToken cancellationToken = default)
             {
                 var product = Product.Create(
                     request.Name,

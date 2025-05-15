@@ -26,7 +26,7 @@ namespace CoPilot.Workshop.Framework
             return ExecuteAsync(request, cancellationToken);
         }
 
-        public abstract Task<R> ExecuteAsync(T request, CancellationToken cancellationToken = default);
+        protected abstract Task<R> ExecuteAsync(T request, CancellationToken cancellationToken = default);
     }
 
     public abstract class BaseHandler<T>
@@ -49,6 +49,6 @@ namespace CoPilot.Workshop.Framework
             return ExecuteAsync(request, cancellationToken);
         }
 
-        public abstract Task<R> ExecuteAsync(T request, CancellationToken cancellationToken = default);
+        protected abstract Task<R> ExecuteAsync(T request, CancellationToken cancellationToken = default);
     }
 }

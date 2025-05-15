@@ -2,7 +2,6 @@
 
 namespace CoPilot.Workshop.Domain
 {
-    
     public class Product : BaseEntity
     {
         public const int NameMinLength = 3;

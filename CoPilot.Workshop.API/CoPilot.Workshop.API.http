@@ -10,7 +10,7 @@ POST {{CoPilot.Workshop.API_HostAddress}}/api/products
 Content-Type: application/json
 
 {
-  "name": "Sample Product",
+  "name": "s",
   "description": "This is a sample product.",
   "price": 19.99
 }

@@ -1,7 +1,6 @@
 using CoPilot.Workshop.App.Products;
 using CoPilot.Workshop.App.Products.Create;
 using Microsoft.AspNetCore.Mvc;
-using static CoPilot.Workshop.App.Products.Create.CreateProductCommand;
 
 namespace CoPilot.Workshop.API.Controllers.Products
 {
@@ -19,7 +18,7 @@ namespace CoPilot.Workshop.API.Controllers.Products
         [HttpPost]
         public async Task<IActionResult> CreateProduct(
             [FromBody] CreateProductCommand command,
-            [FromServices] CreateProductHandler handler,
+            [FromServices] CreateProductCommand.CreateProductHandler handler,
             CancellationToken cancellationToken)
         {
             await handler.HandleAsync(command, cancellationToken);

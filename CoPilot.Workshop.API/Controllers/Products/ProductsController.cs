@@ -1,7 +1,5 @@
-using CoPilot.Workshop.App;
 using CoPilot.Workshop.App.Products;
 using CoPilot.Workshop.App.Products.Create;
-using CoPilot.Workshop.Domain;
 using Microsoft.AspNetCore.Mvc;
 using static CoPilot.Workshop.App.Products.Create.CreateProductCommand;
 
